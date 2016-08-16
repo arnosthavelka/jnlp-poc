@@ -1,5 +1,5 @@
-# JNLP-poc
-POC ofJNLP usage with these features:
+# JNLP-POC
+POC of JNLP usage with these features:
 - maven based build
 - generation of JNLP file (based on properties)
 - signing JAR (with provided keystore) to be usable
@@ -15,8 +15,10 @@ POC is generally based on these articles:
 2. Run [http://localhost:8080/jnlp-poc.jnlp](http://localhost:8080/jnlp-poc.jnlp)
 
 ## Hints
-Creating keystore (password id "pass1234"):
+Creating keystore (stored in `${basedir}/src/main/resources`):
 > keytool -genkey -keystore testkeys -alias jnlp-poc
+
+Note: password is "pass1234"
 
 Signing JAR manually:
 > jarsigner -keystore testkeys jnlp-poc.jar jnlp-poc
